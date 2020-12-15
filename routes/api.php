@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/student','StudentController@getAll');
 Route::get('/student/{nim}','StudentController@showMahasiswa');
-Route::post('/student','StudentController@storeMahasiswa');
+Route::post('/student/store','StudentController@storeMahasiswa');
 Route::put('/student/{nim}','StudentController@updateMahasiswa');
 Route::delete('/student/{nim}','StudentController@deleteMahasiswa');
 
