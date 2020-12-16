@@ -10,7 +10,9 @@ class StudentController extends Controller
     // mengambil semua mahasiswa
     public function getAll()
     {
-        return Student::all();
+        $mahasiswa = Student::all();
+        $mahasiswa->load('schedule');
+        return $mahasiswa;
     }
 
     // mengambil mahasiswa by nim
