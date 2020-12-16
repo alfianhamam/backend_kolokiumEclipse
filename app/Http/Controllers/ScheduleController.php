@@ -12,10 +12,16 @@ class ScheduleController extends Controller
         return Schedule::create($request->all());
     }
 
-    public function updateSchedule($nim_mahasiswa, Request $request)
+    public function updateSchedule($id, Request $request)
     {
-        $mahasiswa = Schedule::find($nim_mahasiswa);
+        $mahasiswa = Schedule::find($id);
         $mahasiswa->update($request->all());
+        return $mahasiswa;
+    }
+
+    public function showSchedule($id)
+    {
+        $mahasiswa = Schedule::find($id);
         return $mahasiswa;
     }
 }
