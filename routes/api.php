@@ -25,3 +25,4 @@ Route::put('/student/{nim}','StudentController@updateMahasiswa');
 Route::delete('/student/{nim}','StudentController@deleteMahasiswa');
 
 Route::post('/schedule','ScheduleController@storeSchedule');
+Route::put('/schedule/{nim}','ScheduleController@updateSchedule');
