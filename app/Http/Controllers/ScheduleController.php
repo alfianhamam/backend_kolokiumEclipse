@@ -15,7 +15,9 @@ class ScheduleController extends Controller
     public function updateSchedule($id, Request $request)
     {
         $mahasiswa = Schedule::find($id);
-        $mahasiswa->update($request->all());
+        $mahasiswa->jadwal = $request->jadwal;
+        $mahasiswa->link = $request->link; 
+        $mahasiswa->save();
         return $mahasiswa;
     }
 
